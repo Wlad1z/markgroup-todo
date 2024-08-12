@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.app{
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(131,58,180);
+    background: linear-gradient(299deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    padding: 10px;
+}
+.todo{
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid whitesmoke;
+    background: white;
+    h1{
+        color: #2E3962;
+        margin-bottom: 20px;
+        img{
+            height: 20px;
+        }
+    }
+    .row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: lightgray;
+        padding-left: 20px;
+        border-radius: 30px;
+        margin-bottom: 25px;
+        input{
+            flex: 1;
+            border: none;
+            outline: none;
+            background: transparent;
+            padding: 10px;
+        }
+        button{
+            border: none;
+            outline: none;
+            padding: 0 30px;
+            background: #ff5945;
+            border-radius: 30px;
+            cursor: pointer;
+            img{
+                height: 42px;
+            }
+        }
+    }
+}
+.todo{
+    ul{
+        li{
+            list-style: none;
+            font-size: 17px;
+            padding: 12px 8px 12px 50px;
+            user-select: none;
+            cursor: pointer;
+            position: relative;
+            text-align: left;
+
+            &::before{
+                content: '';
+                position: absolute;
+                height: 28px;
+                width: 28px;
+                border-radius: 50%;
+                border: 1px solid lightgray;
+                top: 6px;
+                left: 8px
+            }
+
+            span{
+                position: absolute;
+                right: 0;
+                top: 5px;
+                width: 40px;
+                height: 40px;
+                font-size: 22px;
+                color: #555;
+                line-height: 40px;
+                text-align: center;
+                cursor: pointer;
+                border-radius: 50%;
+
+                &:hover{
+                    background: #edeef0;
+                }
+            }
+        }
+        li.checked{
+            color: #555;
+            text-decoration: line-through;
+
+            &::before{
+                background: #ff5945;
+                background-image: url(img/check-svgrepo-com.svg);
+                background-size: cover;
+                background-position: center;
+                border: 1px solid #ff5945;
+            }
+        }
+    }
+}

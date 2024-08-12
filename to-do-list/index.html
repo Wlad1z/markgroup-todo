@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>To-Do</title>
+</head>
+<body>
+    <div class="app">
+        <div class="todo">
+            <h1>Список задач <img src="static/img/list.png" alt="list"></h1>
+            <div class="row">
+                <input type="text" id="input" placeholder="Добавьте задачу">
+                <button onclick="addTask()">
+                    <img src="static/img/check-svgrepo-com.svg" alt="check">
+                </button>
+            </div>
+            <ul id="ul">
+                <!-- <li class="checked">Task</li>
+                <li>Task</li>
+                <li>Task</li> -->
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
